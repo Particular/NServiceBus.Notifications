@@ -56,7 +56,6 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NServiceBus.Notifications\NServiceBus.Notifications.csproj">
@@ -69,5 +68,5 @@
     <StartAction>Program</StartAction>
     <StartProgram>$(ProjectDir)$(OutputPath)NServiceBus.Host.exe</StartProgram>
   </PropertyGroup>
-  <Import Project="..\packages\RippleRestoreTask.0.1.4\build\RippleRestoreTask.targets" Condition="Exists('..\packages\RippleRestoreTask.0.1.4\build\RippleRestoreTask.targets')" />
+  <Import Project="$(SolutionDir)..\BuildSupport\RippleRestoreTask.targets" />
 </Project>
